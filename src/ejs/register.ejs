@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sign up</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<style>
+		body 	{ padding-top:50px; }
+	</style>
+</head>
+
+<body class="container">
+
+	<header>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+
+				<ul class="nav navbar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/login">Sign in</a></li>
+					<li><a href="/new_issue">New issue</a></li>
+					<li><a href="/new_project">New project</a></li>
+					<li><a href="/edit_issue">Edit issue</a></li>
+					<li><a href="/add_task">Add task</a></li>
+					<li><a href="/edit_task">Edit task</a></li>
+					<li><a href="/add_sprint">Add sprint</a></li>
+					<li><a href="/edit_sprint">Edit sprint</a></li>
+				</ul>
+
+			</div>
+		</nav>
+    </header>
+    
+    <main>
+		<h1>Inscription</h1>
+<form method="post" action="/register">
+  <div class="form-group">
+    <label>Username</label>
+    <input type="text" class="form-control" placeholder="Username" name="username">
+  </div>
+   <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control" placeholder="Email" name="email">
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control" placeholder="Password" name="password">
+  </div>
+  <div class="form-group">
+    <label>Confirm Password</label>
+    <input type="password" class="form-control" placeholder="Password" name="password2">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<% if ((locals.username) && (locals.email) && (locals.password) && (locals.password2)) { %>
+	<h4>Project ID :
+		<%= username %>
+	</h4>
+	<h4>US id :
+		<%= email %>
+	</h4>
+	<h4>US description :
+		<%= password %>
+	</h4>
+	<h4>US priority :
+		<%= password2 %>
+	</h4>
+	<% } %>
+
+	</main>
+
+	<footer>
+		<br><br><br>
+		<br><br><br>
+		<br><br><br>
+		<p class="text-center text-muted">&copy; Copyright 2018 CDP 1-2</p>
+	</footer>
+
+</body>
+
+</html>

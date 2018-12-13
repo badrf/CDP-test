@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sign in</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<style>
+		body 	{ padding-top:50px; }
+	</style>
+</head>
+
+<body class="container">
+
+	<header>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+
+				<ul class="nav navbar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/register">Sign up</a></li>
+					<li><a href="/new_issue">New issue</a></li>
+					<li><a href="/new_project">New project</a></li>
+					<li><a href="/edit_issue">Edit issue</a></li>
+					<li><a href="/add_task">Add task</a></li>
+					<li><a href="/edit_task">Edit task</a></li>
+					<li><a href="/add_sprint">Add sprint</a></li>
+					<li><a href="/edit_sprint">Edit sprint</a></li>
+				</ul>
+
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<h1>Inscription</h1>
+		<form method="post" action="/login">
+			<input type="text" name="username" placeholder="Username" required>
+			<input type="password" name="password" placeholder="Password" required>
+			<input type="submit" value="Sign in">
+		</form>
+	</main>
+
+	<footer>
+		<br><br><br>
+		<br><br><br>
+		<br><br><br>
+		<p class="text-center text-muted">&copy; Copyright 2018 CDP 1-2</p>
+	</footer>
+
+</body>
+
+</html>

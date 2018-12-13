@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Edit sprint</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<style>
+		body 	{ padding-top:50px; }
+	</style>
+</head>
+
+<body class="container">
+
+	<header>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+
+				<ul class="nav navbar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/login">Sign in</a></li>
+					<li><a href="/new_issue">New issue</a></li>
+					<li><a href="/new_project">New project</a></li>
+					<li><a href="/edit_project">Edit project</a></li>
+					<li><a href="/edit_issue">Edit issue</a></li>
+					<li><a href="/new_task">New task</a></li>
+					<li><a href="/edit_task">Edit task</a></li>
+					<li><a href="/new_sprint">New sprint</a></li>
+					<li><a href="/edit_sprint">Edit sprint</a></li>
+				</ul>
+
+			</div>
+		</nav>
+	</header>
+
+	<main>
+
+		<h1>Edit a sprint</h1>
+		<form method="post" action="/editsprint">
+			<input type="text" name="pid" placeholder="Enter project id" required>
+			<input type="text" name="start" placeholder="Enter start date" required>
+			<input type="text" name="end" placeholder="Enter end date" required>
+			<input type="text" name="state" placeholder="Enter current" required>
+			<input type="text" name="number" placeholder="Enter sprint number" required>
+			<input type="submit" value="Add sprint">
+		</form>
+
+		<% if ((locals.pid) && (locals.start) && (locals.end) && (locals.state) && (locals.number)) { %>
+			<h4>Project ID :
+				<%= pid %>
+			</h4>
+			<h4>Sprint start :
+				<%= start %>
+			</h4>
+			<h4>Sprint end :
+				<%= end %>
+			</h4>
+			<h4>Sprint state :
+				<%= state %>
+			</h4>
+			<h4>Sprint number :
+				<%= number %>
+			</h4>
+			<% } %>
+			
+	</main>
+
+	<footer>
+		<br><br><br>
+		<br><br><br>
+		<br><br><br>
+		<p class="text-center text-muted">&copy; Copyright 2018 CDP 1-2</p>
+	</footer>
+
+</body>
+
+</html>

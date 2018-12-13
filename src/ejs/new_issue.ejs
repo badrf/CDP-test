@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Add issue</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<style>
+		body 	{ padding-top:50px; }
+	</style>
+</head>
+
+<body class="container">
+
+	<header>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+
+				<ul class="nav navbar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/login">Sign in</a></li>
+					<li><a href="/register">Sign up</a></li>
+					<li><a href="/new_project">New project</a></li>
+					<li><a href="/edit_project">Edit project</a></li>
+					<li><a href="/edit_issue">Edit issue</a></li>
+					<li><a href="/new_task">New task</a></li>
+					<li><a href="/edit_task">Edit task</a></li>
+					<li><a href="/new_sprint">New sprint</a></li>
+					<li><a href="/edit_sprint">Edit sprint</a></li>
+				</ul>
+
+			</div>
+		</nav>
+	</header>
+
+	<main>
+
+		<h1>Add an issue</h1>
+		<form method="post" action="/addissue">
+			<input type="text" name="pid" placeholder="Enter project id" required>
+			<input type="text" name="id" placeholder="Enter issue id" required>
+			<input type="text" name="description" placeholder="Describe your issue" required>
+			<input type="text" name="priority" placeholder="Enter issue priority" required>
+			<input type="text" name="difficulty" placeholder="Enter issue difficulty" required>
+			<input type="text" name="sprint" placeholder="Enter sprint number" required>
+			<input type="submit" value="Add issue">
+		</form>
+		<% if ((locals.pid) && (locals.id) && (locals.description) && (locals.priority) && (locals.difficulty) && (locals.sprint)) { %>
+		<h4>Project ID :
+			<%= pid %>
+		</h4>
+		<h4>US id :
+			<%= id %>
+		</h4>
+		<h4>US description :
+			<%= description %>
+		</h4>
+		<h4>US priority :
+			<%= priority %>
+		</h4>
+		<h4>US difficulty :
+			<%= difficulty %>
+		</h4>
+		<h4>US difficulty :
+			<%= sprint %>
+		</h4>
+		<% } %>
+
+	</main>
+
+	<footer>
+		<br><br><br>
+		<br><br><br>
+		<br><br><br>
+		<p class="text-center text-muted">&copy; Copyright 2018 CDP 1-2</p>
+	</footer>
+
+</body>
+
+</html>

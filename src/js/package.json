@@ -1,0 +1,42 @@
+{
+  "name": "cdp2018",
+  "version": "1.0.0",
+  "description": "install dependencies",
+  "main": "app.js",
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "circular-json": "^0.5.9",
+    "connect": "^3.6.6",
+    "ejs": "^2.6.1",
+    "eslint": "^5.9.0",
+    "express": "^4.11.0",
+    "jsdom": "^13.0.0",
+    "mariadb": "^2.0.1-beta",
+    "mysql": "github:mysqljs/mysql",
+    "socks": "^2.2.2"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "lint": "./node_modules/.bin/eslint app.js",
+    "test": "python3 ../../test/addproj.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badrf/CDP-2018.git"
+  },
+  "author": "1-2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/badrf/CDP-2018/issues"
+  },
+  "homepage": "https://github.com/badrf/CDP-2018#readme",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
